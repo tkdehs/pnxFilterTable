@@ -1,0 +1,6 @@
+framework module pnxFilterTable {
+  umbrella header "pnxFilterTable-umbrella.h"
+
+  export *
+  module * { export * }
+}

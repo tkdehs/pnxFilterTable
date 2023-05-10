@@ -1,0 +1,16 @@
+PODS:
+  - pnxFilterTable (0.1.0)
+
+DEPENDENCIES:
+  - pnxFilterTable (from `../`)
+
+EXTERNAL SOURCES:
+  pnxFilterTable:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  pnxFilterTable: d8a5fe1136cf0992a30b88dfb7798a82d25666e1
+
+PODFILE CHECKSUM: b3476114523716a037021654f2ab90de1d6c9241
+
+COCOAPODS: 1.12.0

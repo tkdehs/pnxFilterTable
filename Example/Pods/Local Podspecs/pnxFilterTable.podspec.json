@@ -1,0 +1,22 @@
+{
+  "name": "pnxFilterTable",
+  "version": "0.1.0",
+  "summary": "A short description of pnxFilterTable.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Sangdon Kim/pnxFilterTable",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Sangdon Kim": "107008333+sangdon-kim-switchwon@users.noreply.github.com"
+  },
+  "source": {
+    "git": "https://github.com/Sangdon Kim/pnxFilterTable.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "pnxFilterTable/Classes/**/*"
+}
