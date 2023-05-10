@@ -14,8 +14,11 @@
 		AFE2DC0C1866316CF722EAEAAAE2F1DA /* Pods-pnxFilterTable_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 060D85076DBCEA7F5C13C5CD5AE69F17 /* Pods-pnxFilterTable_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B058E18DFBCC1C37D966601C49A870D4 /* pnxFilterTable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82FC176BD3651EF6357C35C1DC655874 /* pnxFilterTable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9037ACD10B282EBB6DC324C4C9C6C49 /* Pods-pnxFilterTable_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEE3CCD1FF0D11A8169952628CC4CBE /* Pods-pnxFilterTable_Tests-dummy.m */; };
-		DF798B7777DA80654E874795CE5A824C /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974004C9661AFA31653AC60D96B4BF1C /* ReplaceMe.swift */; };
+		DF798B7777DA80654E874795CE5A824C /* PnxFilterTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974004C9661AFA31653AC60D96B4BF1C /* PnxFilterTable.swift */; };
 		E477FD2D82FAE25C85125D6D1EFAF072 /* Pods-pnxFilterTable_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3734A897429C86B8447E6FFF5DFF3766 /* Pods-pnxFilterTable_Example-dummy.m */; };
+		F263B45C2A0B426F006ACC45 /* PnxFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F263B45A2A0B426F006ACC45 /* PnxFilterTableViewCell.swift */; };
+		F263B45D2A0B426F006ACC45 /* PnxFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F263B45B2A0B426F006ACC45 /* PnxFilterTableViewCell.xib */; };
+		F263B4602A0B42E8006ACC45 /* PnxFilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F263B45F2A0B42E8006ACC45 /* PnxFilterData.swift */; };
 		FA006B3F0C0396490FE6E67442ABBEF3 /* pnxFilterTable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 564652FCB8B9746BE561CE961C1AFFD4 /* pnxFilterTable-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -39,17 +42,17 @@
 /* Begin PBXFileReference section */
 		060D85076DBCEA7F5C13C5CD5AE69F17 /* Pods-pnxFilterTable_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pnxFilterTable_Tests-umbrella.h"; sourceTree = "<group>"; };
 		0CEE3CCD1FF0D11A8169952628CC4CBE /* Pods-pnxFilterTable_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-pnxFilterTable_Tests-dummy.m"; sourceTree = "<group>"; };
-		0F7210410D431F5E0763B10A721B3012 /* pnxFilterTable */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = pnxFilterTable; path = pnxFilterTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7210410D431F5E0763B10A721B3012 /* pnxFilterTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pnxFilterTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E296F9EF64F483B9F2DBB26BFF8226B /* Pods-pnxFilterTable_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pnxFilterTable_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1E300DA72BCE701EA57C37B44E9511A5 /* Pods-pnxFilterTable_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pnxFilterTable_Example.release.xcconfig"; sourceTree = "<group>"; };
-		26739DB00522F568F854348E8CDF6EDB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		26739DB00522F568F854348E8CDF6EDB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		30853A5B5AEE7C9A3161335B850CA434 /* Pods-pnxFilterTable_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-pnxFilterTable_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3734A897429C86B8447E6FFF5DFF3766 /* Pods-pnxFilterTable_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-pnxFilterTable_Example-dummy.m"; sourceTree = "<group>"; };
 		384FA9D7C01B787C666F71F54834C5B7 /* Pods-pnxFilterTable_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-pnxFilterTable_Tests-Info.plist"; sourceTree = "<group>"; };
 		3E50EFA7B08BBC2D3843B85BCD29A09D /* pnxFilterTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = pnxFilterTable.debug.xcconfig; sourceTree = "<group>"; };
 		472FEDB3B82E0F5ADC756B6C0080BDA4 /* Pods-pnxFilterTable_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-pnxFilterTable_Example.modulemap"; sourceTree = "<group>"; };
 		564652FCB8B9746BE561CE961C1AFFD4 /* pnxFilterTable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "pnxFilterTable-dummy.m"; sourceTree = "<group>"; };
-		59671D91561529193A748230A142E378 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		59671D91561529193A748230A142E378 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6FDFA10C831B64CDEBD2D12E73DF74BC /* Pods-pnxFilterTable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pnxFilterTable_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		76993F363B58BF57D2646751E703E166 /* pnxFilterTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = pnxFilterTable.release.xcconfig; sourceTree = "<group>"; };
@@ -57,9 +60,9 @@
 		7E1772DB9A75A7C1E96CEE242602A273 /* pnxFilterTable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "pnxFilterTable-Info.plist"; sourceTree = "<group>"; };
 		82FC176BD3651EF6357C35C1DC655874 /* pnxFilterTable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "pnxFilterTable-umbrella.h"; sourceTree = "<group>"; };
 		84DDDDD129257DCF4AFF076F0CCC4E16 /* Pods-pnxFilterTable_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-pnxFilterTable_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		8800F889D5C1D831D2AB666726F309C5 /* pnxFilterTable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = pnxFilterTable.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		974004C9661AFA31653AC60D96B4BF1C /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = pnxFilterTable/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8800F889D5C1D831D2AB666726F309C5 /* pnxFilterTable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = pnxFilterTable.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		974004C9661AFA31653AC60D96B4BF1C /* PnxFilterTable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PnxFilterTable.swift; path = pnxFilterTable/Classes/PnxFilterTable.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E975A0764701B65A5C1078F5059B0ED /* Pods-pnxFilterTable_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-pnxFilterTable_Tests"; path = Pods_pnxFilterTable_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F6742A774025D3AB317BE2BDF80D57 /* pnxFilterTable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "pnxFilterTable-prefix.pch"; sourceTree = "<group>"; };
 		BDAF35D37B83371E5AB28CC659603468 /* Pods-pnxFilterTable_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-pnxFilterTable_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		CEBC9A640A00541DB8B4EFEDF6FAA24B /* Pods-pnxFilterTable_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-pnxFilterTable_Example"; path = Pods_pnxFilterTable_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92AB0EE424A364AA90DB6371443500F /* Pods-pnxFilterTable_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pnxFilterTable_Example-umbrella.h"; sourceTree = "<group>"; };
 		DC27A540A8CA1604BF83BDE7FE30D168 /* Pods-pnxFilterTable_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pnxFilterTable_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F263B45A2A0B426F006ACC45 /* PnxFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PnxFilterTableViewCell.swift; sourceTree = "<group>"; };
+		F263B45B2A0B426F006ACC45 /* PnxFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PnxFilterTableViewCell.xib; sourceTree = "<group>"; };
+		F263B45F2A0B42E8006ACC45 /* PnxFilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PnxFilterData.swift; sourceTree = "<group>"; };
 		F6C9414327219275D2E08C191E6D2D04 /* Pods-pnxFilterTable_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-pnxFilterTable_Tests.modulemap"; sourceTree = "<group>"; };
 		FFBD1000D770451971A3A98F01F15654 /* pnxFilterTable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = pnxFilterTable.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +109,9 @@
 		19E1E03EB58EF5CA43186585B20A6630 /* pnxFilterTable */ = {
 			isa = PBXGroup;
 			children = (
-				974004C9661AFA31653AC60D96B4BF1C /* ReplaceMe.swift */,
+				F263B45E2A0B42D7006ACC45 /* Model */,
+				F263B4592A0B421E006ACC45 /* Cell */,
+				974004C9661AFA31653AC60D96B4BF1C /* PnxFilterTable.swift */,
 				F9A0C114CAA33954EF09170ED506526C /* Pod */,
 				5C889EAAE75E7554BE96B76A3C42D552 /* Support Files */,
 			);
@@ -114,7 +122,7 @@
 		36F9E9AA2B4079168F85A407D6873800 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F7210410D431F5E0763B10A721B3012 /* pnxFilterTable */,
+				0F7210410D431F5E0763B10A721B3012 /* pnxFilterTable.framework */,
 				CEBC9A640A00541DB8B4EFEDF6FAA24B /* Pods-pnxFilterTable_Example */,
 				9E975A0764701B65A5C1078F5059B0ED /* Pods-pnxFilterTable_Tests */,
 			);
@@ -203,6 +211,23 @@
 			);
 			name = "Pods-pnxFilterTable_Tests";
 			path = "Target Support Files/Pods-pnxFilterTable_Tests";
+			sourceTree = "<group>";
+		};
+		F263B4592A0B421E006ACC45 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F263B45A2A0B426F006ACC45 /* PnxFilterTableViewCell.swift */,
+				F263B45B2A0B426F006ACC45 /* PnxFilterTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F263B45E2A0B42D7006ACC45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F263B45F2A0B42E8006ACC45 /* PnxFilterData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F2F9C1FB6EBC331F4759A8F071C72AD0 /* Development Pods */ = {
@@ -306,7 +331,7 @@
 			);
 			name = pnxFilterTable;
 			productName = pnxFilterTable;
-			productReference = 0F7210410D431F5E0763B10A721B3012 /* pnxFilterTable */;
+			productReference = 0F7210410D431F5E0763B10A721B3012 /* pnxFilterTable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -350,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F263B45D2A0B426F006ACC45 /* PnxFilterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,8 +393,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F263B4602A0B42E8006ACC45 /* PnxFilterData.swift in Sources */,
 				FA006B3F0C0396490FE6E67442ABBEF3 /* pnxFilterTable-dummy.m in Sources */,
-				DF798B7777DA80654E874795CE5A824C /* ReplaceMe.swift in Sources */,
+				F263B45C2A0B426F006ACC45 /* PnxFilterTableViewCell.swift in Sources */,
+				DF798B7777DA80654E874795CE5A824C /* PnxFilterTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +450,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/pnxFilterTable/pnxFilterTable-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/pnxFilterTable/pnxFilterTable-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/pnxFilterTable/pnxFilterTable.modulemap";
 				PRODUCT_MODULE_NAME = pnxFilterTable;
@@ -454,7 +482,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/pnxFilterTable/pnxFilterTable-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/pnxFilterTable/pnxFilterTable-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/pnxFilterTable/pnxFilterTable.modulemap";
 				PRODUCT_MODULE_NAME = pnxFilterTable;
@@ -591,8 +619,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
