@@ -7,9 +7,47 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+View 생성 코드
+```swift
+// view 생성
+var pnxFilterTable = PnxFilterTable()
+```
+
+카테고리 타이틀 설정
+```swift
+// 카테고리 타이틀 폰트 설정
+self.pnxFilterTable.titleFont = UIFont.systemFont(ofSize: 14, weight: .bold)
+
+// 카테고리 타이틀 컬러 설정
+self.pnxFilterTable.titleFontColor = UIColor.black
+```
+
+필터 버튼 설정
+```swift
+
+
+// 기본(선택안함) 폰트, 색상, 배경색 설정
+self.pnxFilterTable.setDefaultButtonStryle(font: UIFont.systemFont(ofSize: 14, weight: .bold) ,fontColor: UIColor.white, backgroundColor: UIColor.red)
+
+// 선택시 색상, 배경색 설정
+self.pnxFilterTable.setSelectedButtonStryle(fontColor: UIColor.white, backgroundColor: UIColor.red)
+
+
+// 다중 선택 여부 설정
+self.pnxFilterTable.isMultipleSelect = true
+
+// 다중 선택 여부 설정
+self.pnxFilterTable.isMultipleSelect = true
+
+// 필터간 간격 설정
+self.pnxFilterTable.horizontalSpacing = 5
+self.pnxFilterTable.verticalSpacing = 5
+```
+
+
+
+
 
 ## Installation
 
@@ -22,7 +60,7 @@ pod 'pnxFilterTable'
 
 ## Author
 
-Sangdon Kim, 107008333+sangdon-kim-switchwon@users.noreply.github.com
+Sangdon Kim, tkdehs0454@naver.com
 
 ## License
 

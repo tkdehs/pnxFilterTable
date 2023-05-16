@@ -38,6 +38,7 @@ class ViewController: UIViewController {
                                                              PnxFilterData.Data(display:"testt2", value: ""),
                                                              PnxFilterData.Data(display:"testtestt3", value: ""),
                                                             PnxFilterData.Data(display:"testte4", value: "")])]
+        self.pnxFilterTable.isMultipleSelect = true
         self.pnxFilterTable.dataList = dataList
         self.pnxFilterTable.tableView.separatorStyle = .none
         

@@ -18,6 +18,13 @@ import UIKit
     var selectedFontColor:UIColor = UIColor.white
     var selectedBackgroundColor:UIColor = UIColor(red: 0.227, green: 0.341, blue: 0.604, alpha: 1.000)
     
+    /// 다중 선택 가능여부
+    public var isMultipleSelect:Bool = false {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
     public var horizontalSpacing:CGFloat = 5 {
         didSet {
             self.tableView.reloadData()
@@ -102,12 +109,7 @@ import UIKit
         let data: PnxFilterData = self.dataList[indexPath.row]
         /// 테이블뷰 세팅
         guard let cell: PnxFilterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PnxFilterTableViewCell") as? PnxFilterTableViewCell else { return UITableViewCell() }
-        cell.horizontalSpacing = self.horizontalSpacing
-        cell.verticalSpacing = self.verticalSpacing
-        cell.setDefaultButtonStryle(font: self.defaultFont, fontColor: self.defaultFontColor, backgroundColor: self.defaultBackgroundColor)
-        cell.setSelectedButtonStryle(fontColor: self.selectedFontColor, backgroundColor: self.selectedBackgroundColor)
-        cell.setCellData(data)
-        cell.delegate = self.delegate
+        cell.setCellData(data,rootView: self)
         
         return cell
     }

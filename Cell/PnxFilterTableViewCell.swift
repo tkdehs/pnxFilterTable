@@ -19,23 +19,9 @@ class PnxFilterTableViewCell: UITableViewCell {
     
     var conHeight_filterView: NSLayoutConstraint?
     
-    // MARK: - filter Buttons Setting
-    var defaultFont:UIFont = UIFont.systemFont(ofSize: 12, weight: .bold)
-    var defaultFontColor:UIColor = UIColor.white
-    var defaultBackgroundColor:UIColor = UIColor(red: 0.208, green: 0.710, blue: 1.000, alpha: 1.000)
-    
-    var selectedFontColor:UIColor = UIColor.white
-    var selectedBackgroundColor:UIColor = UIColor(red: 0.227, green: 0.341, blue: 0.604, alpha: 1.000)
-    
-    /// 다중 선택 가능여부
-    var isMultipleSelect:Bool = false
-    
-    var horizontalSpacing:CGFloat = 5
-    var verticalSpacing:CGFloat = 5
-    
-    var delegate:PnxFilterTableDelegate?
-    
     var cellData:[FilterButtonData] = []
+    
+    var rootView:PnxFilterTable?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -108,30 +94,9 @@ class PnxFilterTableViewCell: UITableViewCell {
         ])
         print("awakeFromNib init view")
     }
-    
-    public func setDefaultButtonStryle(font:UIFont?, fontColor:UIColor?, backgroundColor:UIColor?){
-        if let font = font {
-            self.defaultFont = font
-        }
-        if let fontColor = fontColor {
-            self.defaultFontColor = fontColor
-        }
-        if let backgroundColor = backgroundColor {
-            self.defaultBackgroundColor = backgroundColor
-        }
-    }
-    
-    public func setSelectedButtonStryle(fontColor:UIColor?, backgroundColor:UIColor?){
-        if let fontColor = fontColor {
-            self.selectedFontColor = fontColor
-        }
-        if let backgroundColor = backgroundColor {
-            self.selectedBackgroundColor = backgroundColor
-        }
-    }
-    
 
-    func setCellData(_ filterData:PnxFilterData) {
+    func setCellData(_ filterData:PnxFilterData, rootView:PnxFilterTable) {
+        self.rootView = rootView
         self.initView()
         self.cellData = []
         self.titleLabel.text = filterData.title
@@ -149,16 +114,16 @@ class PnxFilterTableViewCell: UITableViewCell {
 
             if positionX > self.frame.width {
                 positionX = 0
-                positionY += button.frame.size.height + self.verticalSpacing
+                positionY += button.frame.size.height + rootView.verticalSpacing
                 button.frame = CGRect.init(x: positionX, y: positionY, width: button.frame.size.width + 20, height: button.frame.size.height )
             } else {
                 button.frame = CGRect.init(x: positionX, y: positionY, width: button.frame.size.width + 10, height: button.frame.size.height )
             }
-            positionX += button.frame.size.width + self.horizontalSpacing
+            positionX += button.frame.size.width + rootView.horizontalSpacing
             button.layer.cornerRadius = button.frame.size.height/2
             if defaultHight == 0 { defaultHight = button.frame.size.height }
             button.addTarget {
-                if !self.isMultipleSelect {
+                if !rootView.isMultipleSelect {
                     self.cellData.filter{ $0.data.isSelected }.forEach { selectedfilterData in
                         selectedfilterData.data.reversSelected()
                         self.setButtonStyle(filterData:selectedfilterData)
@@ -166,7 +131,7 @@ class PnxFilterTableViewCell: UITableViewCell {
                 }
                 data.reversSelected()
                 self.setButtonStyle(filterData:filterData)
-                self.delegate?.didSelectedButton(selector: filterData.button, data: filterData.data)
+                rootView.delegate?.didSelectedButton(selector: filterData.button, data: filterData.data)
             }
             self.cellData.append(FilterButtonData(button: button, data: data))
         }
@@ -175,13 +140,14 @@ class PnxFilterTableViewCell: UITableViewCell {
     }
     
     func setButtonStyle(filterData:FilterButtonData){
-        filterData.button.titleLabel?.font = self.defaultFont
+        guard let rootView = self.rootView else { return }
+        filterData.button.titleLabel?.font = rootView.defaultFont
         if filterData.data.isSelected {
-            filterData.button.setTitleColor(self.selectedFontColor, for: .normal)
-            filterData.button.backgroundColor = self.selectedBackgroundColor
+            filterData.button.setTitleColor(rootView.selectedFontColor, for: .normal)
+            filterData.button.backgroundColor = rootView.selectedBackgroundColor
         } else {
-            filterData.button.setTitleColor(self.defaultFontColor, for: .normal)
-            filterData.button.backgroundColor = self.defaultBackgroundColor
+            filterData.button.setTitleColor(rootView.defaultFontColor, for: .normal)
+            filterData.button.backgroundColor = rootView.defaultBackgroundColor
         }
     }
     
