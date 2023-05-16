@@ -39,12 +39,12 @@
 		607FACE51AFB9204008FA782 /* pnxFilterTable_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pnxFilterTable_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		93C2129AF39597089886D1E5 /* pnxFilterTable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = pnxFilterTable.podspec; path = ../pnxFilterTable.podspec; sourceTree = "<group>"; };
+		93C2129AF39597089886D1E5 /* pnxFilterTable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = pnxFilterTable.podspec; path = ../pnxFilterTable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99AE56209DE7A93E604FAC33 /* Pods-pnxFilterTable_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pnxFilterTable_Example.release.xcconfig"; path = "Target Support Files/Pods-pnxFilterTable_Example/Pods-pnxFilterTable_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A1B602FE0EBD1235F7F68C4F /* Pods-pnxFilterTable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pnxFilterTable_Example.debug.xcconfig"; path = "Target Support Files/Pods-pnxFilterTable_Example/Pods-pnxFilterTable_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B0B06E373479DACD3B55BD27 /* Pods-pnxFilterTable_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pnxFilterTable_Tests.debug.xcconfig"; path = "Target Support Files/Pods-pnxFilterTable_Tests/Pods-pnxFilterTable_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BF1FAB3343752448B4BB4EA1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C83356FF8FC7F78041F84083 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BF1FAB3343752448B4BB4EA1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C83356FF8FC7F78041F84083 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E3473DDC7566C2B329690AFE /* Pods_pnxFilterTable_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pnxFilterTable_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F428CD36C55C6A440ADE652E /* Pods-pnxFilterTable_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pnxFilterTable_Tests.release.xcconfig"; path = "Target Support Files/Pods-pnxFilterTable_Tests/Pods-pnxFilterTable_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,6 @@
 				B0B06E373479DACD3B55BD27 /* Pods-pnxFilterTable_Tests.debug.xcconfig */,
 				F428CD36C55C6A440ADE652E /* Pods-pnxFilterTable_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -479,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pnxFilterTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -494,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pnxFilterTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -516,6 +518,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,6 +537,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

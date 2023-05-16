@@ -17,7 +17,6 @@
 		DF798B7777DA80654E874795CE5A824C /* PnxFilterTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974004C9661AFA31653AC60D96B4BF1C /* PnxFilterTable.swift */; };
 		E477FD2D82FAE25C85125D6D1EFAF072 /* Pods-pnxFilterTable_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3734A897429C86B8447E6FFF5DFF3766 /* Pods-pnxFilterTable_Example-dummy.m */; };
 		F263B45C2A0B426F006ACC45 /* PnxFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F263B45A2A0B426F006ACC45 /* PnxFilterTableViewCell.swift */; };
-		F263B45D2A0B426F006ACC45 /* PnxFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F263B45B2A0B426F006ACC45 /* PnxFilterTableViewCell.xib */; };
 		F263B4602A0B42E8006ACC45 /* PnxFilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F263B45F2A0B42E8006ACC45 /* PnxFilterData.swift */; };
 		FA006B3F0C0396490FE6E67442ABBEF3 /* pnxFilterTable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 564652FCB8B9746BE561CE961C1AFFD4 /* pnxFilterTable-dummy.m */; };
 /* End PBXBuildFile section */
@@ -72,7 +71,6 @@
 		D92AB0EE424A364AA90DB6371443500F /* Pods-pnxFilterTable_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pnxFilterTable_Example-umbrella.h"; sourceTree = "<group>"; };
 		DC27A540A8CA1604BF83BDE7FE30D168 /* Pods-pnxFilterTable_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pnxFilterTable_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F263B45A2A0B426F006ACC45 /* PnxFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PnxFilterTableViewCell.swift; sourceTree = "<group>"; };
-		F263B45B2A0B426F006ACC45 /* PnxFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PnxFilterTableViewCell.xib; sourceTree = "<group>"; };
 		F263B45F2A0B42E8006ACC45 /* PnxFilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PnxFilterData.swift; sourceTree = "<group>"; };
 		F6C9414327219275D2E08C191E6D2D04 /* Pods-pnxFilterTable_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-pnxFilterTable_Tests.modulemap"; sourceTree = "<group>"; };
 		FFBD1000D770451971A3A98F01F15654 /* pnxFilterTable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = pnxFilterTable.modulemap; sourceTree = "<group>"; };
@@ -217,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				F263B45A2A0B426F006ACC45 /* PnxFilterTableViewCell.swift */,
-				F263B45B2A0B426F006ACC45 /* PnxFilterTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -375,7 +372,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F263B45D2A0B426F006ACC45 /* PnxFilterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
