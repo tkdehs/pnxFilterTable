@@ -22,22 +22,22 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let dataList = [PnxFilterData(title:"title1", datas: [PnxFilterData.Data(display:"testtest1", value: ""),
-                                                             PnxFilterData.Data(display:"testt2", value: ""),
-                                                             PnxFilterData.Data(display:"testtestt3", value: ""),
-                                                             PnxFilterData.Data(display:"testte4", value: ""),
-                                                             PnxFilterData.Data(display:"testte4", value: ""),
-                                                             PnxFilterData.Data(display:"testte4", value: ""),
-                                                             PnxFilterData.Data(display:"testte4242424242", value: ""),
-                                                             PnxFilterData.Data(display:"tes4", value: ""),
-                                                             PnxFilterData.Data(display:"tes", value: ""),
-                                                             PnxFilterData.Data(display:"testte4", value: ""),
-                                                             PnxFilterData.Data(display:"e4", value: ""),
-                                                             PnxFilterData.Data(display:"testte4", value: "")]),
-                        PnxFilterData(title:"title2", datas: [PnxFilterData.Data(display:"testtest1", value: ""),
-                                                             PnxFilterData.Data(display:"testt2", value: ""),
-                                                             PnxFilterData.Data(display:"testtestt3", value: ""),
-                                                            PnxFilterData.Data(display:"testte4", value: "")])]
+        let dataList = [PnxFilterData(title:"과일", datas: [PnxFilterData.Data(display:"사과", value: "1"),
+                                                             PnxFilterData.Data(display:"포도", value: "2"),
+                                                             PnxFilterData.Data(display:"딸기", value: "3"),
+                                                             PnxFilterData.Data(display:"토마토", value: "4"),
+                                                             PnxFilterData.Data(display:"배", value: "5"),
+                                                             PnxFilterData.Data(display:"파인애플", value: "6"),
+                                                             PnxFilterData.Data(display:"망고", value: "7"),
+                                                             PnxFilterData.Data(display:"복숭아", value: "8"),
+                                                             PnxFilterData.Data(display:"아보카도", value: "9"),
+                                                             PnxFilterData.Data(display:"오렌지", value: "10"),
+                                                             PnxFilterData.Data(display:"골드키위", value: "11"),
+                                                             PnxFilterData.Data(display:"수박", value: "12")]),
+                        PnxFilterData(title:"귝가", datas: [PnxFilterData.Data(display:"한국", value: "1"),
+                                                             PnxFilterData.Data(display:"일본", value: "2"),
+                                                             PnxFilterData.Data(display:"미국", value: "3"),
+                                                            PnxFilterData.Data(display:"영국", value: "4")])]
         self.pnxFilterTable.isMultipleSelect = true
         self.pnxFilterTable.dataList = dataList
         self.pnxFilterTable.tableView.separatorStyle = .none

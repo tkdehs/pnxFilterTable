@@ -45,8 +45,8 @@ self.pnxFilterTable.horizontalSpacing = 5
 self.pnxFilterTable.verticalSpacing = 5
 ```
 
-
-
+## Screen Shot
+<img src="/Example/image/sampleImage.png">
 
 
 ## Installation
