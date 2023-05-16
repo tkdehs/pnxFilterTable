@@ -107,8 +107,8 @@
 		19E1E03EB58EF5CA43186585B20A6630 /* pnxFilterTable */ = {
 			isa = PBXGroup;
 			children = (
-				F263B45E2A0B42D7006ACC45 /* Model */,
-				F263B4592A0B421E006ACC45 /* Cell */,
+				F263B45F2A0B42E8006ACC45 /* PnxFilterData.swift */,
+				F263B45A2A0B426F006ACC45 /* PnxFilterTableViewCell.swift */,
 				974004C9661AFA31653AC60D96B4BF1C /* PnxFilterTable.swift */,
 				F9A0C114CAA33954EF09170ED506526C /* Pod */,
 				5C889EAAE75E7554BE96B76A3C42D552 /* Support Files */,
@@ -209,22 +209,6 @@
 			);
 			name = "Pods-pnxFilterTable_Tests";
 			path = "Target Support Files/Pods-pnxFilterTable_Tests";
-			sourceTree = "<group>";
-		};
-		F263B4592A0B421E006ACC45 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				F263B45A2A0B426F006ACC45 /* PnxFilterTableViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		F263B45E2A0B42D7006ACC45 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F263B45F2A0B42E8006ACC45 /* PnxFilterData.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		F2F9C1FB6EBC331F4759A8F071C72AD0 /* Development Pods */ = {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PnxFilterTableViewCell: UITableViewCell {
+public class PnxFilterTableViewCell: UITableViewCell {
     var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
@@ -22,11 +22,6 @@ class PnxFilterTableViewCell: UITableViewCell {
     var cellData:[FilterButtonData] = []
     
     var rootView:PnxFilterTable?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
     
     func initView() {
         self.contentView.addSubview(self.titleLabel)
