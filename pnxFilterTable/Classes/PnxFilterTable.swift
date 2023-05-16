@@ -3,6 +3,7 @@ import UIKit
 
 @IBDesignable public class PnxFilterTable: UIView, UITableViewDataSource, UITableViewDelegate {
     
+    public var delegate:PnxFilterTableDelegate?
     
     public var titleFont:UIFont = UIFont.systemFont(ofSize: 14, weight: .bold)
     
@@ -15,7 +16,7 @@ import UIKit
     
     var selectedFont:UIFont = UIFont.systemFont(ofSize: 12, weight: .bold)
     var selectedFontColor:UIColor = UIColor.white
-    var selectedBackgroundColor:UIColor = UIColor(red: 0.208, green: 0.710, blue: 1.000, alpha: 1.000)
+    var selectedBackgroundColor:UIColor = UIColor(red: 0.227, green: 0.341, blue: 0.604, alpha: 1.000)
     
     public var horizontalSpacing:CGFloat = 5 {
         didSet {
@@ -49,7 +50,7 @@ import UIKit
         self.addSubview(self.tableView)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+        self.tableView.alwaysBounceVertical = false
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.tableView.topAnchor.constraint(equalTo: self.topAnchor),
@@ -106,8 +107,12 @@ import UIKit
         cell.setDefaultButtonStryle(font: self.defaultFont, fontColor: self.defaultFontColor, backgroundColor: self.defaultBackgroundColor)
         cell.setSelectedButtonStryle(fontColor: self.selectedFontColor, backgroundColor: self.selectedBackgroundColor)
         cell.setCellData(data)
+        cell.delegate = self.delegate
         
         return cell
     }
 }
 
+public protocol PnxFilterTableDelegate {
+    func didSelectedButton(selector:UIButton, data:PnxFilterData.Data)
+}

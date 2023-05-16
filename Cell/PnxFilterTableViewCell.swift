@@ -8,9 +8,6 @@
 import UIKit
 
 class PnxFilterTableViewCell: UITableViewCell {
-    
-    var data: PnxFilterData?
-
     var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
@@ -28,7 +25,7 @@ class PnxFilterTableViewCell: UITableViewCell {
     var defaultBackgroundColor:UIColor = UIColor(red: 0.208, green: 0.710, blue: 1.000, alpha: 1.000)
     
     var selectedFontColor:UIColor = UIColor.white
-    var selectedBackgroundColor:UIColor = UIColor(red: 0.208, green: 0.710, blue: 1.000, alpha: 1.000)
+    var selectedBackgroundColor:UIColor = UIColor(red: 0.227, green: 0.341, blue: 0.604, alpha: 1.000)
     
     /// 다중 선택 가능여부
     var isMultipleSelect:Bool = false
@@ -36,36 +33,41 @@ class PnxFilterTableViewCell: UITableViewCell {
     var horizontalSpacing:CGFloat = 5
     var verticalSpacing:CGFloat = 5
     
+    var delegate:PnxFilterTableDelegate?
+    
+    var cellData:[FilterButtonData] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
     func initView() {
-        self.addSubview(self.titleLabel)
-        self.addSubview(self.filterView)
+        self.contentView.addSubview(self.titleLabel)
+        self.contentView.addSubview(self.filterView)
         self.selectionStyle = .none
+        self.isUserInteractionEnabled = true
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.filterView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint(item: self.titleLabel,
                            attribute: .leading,
                            relatedBy: .equal,
-                           toItem: self,
+                           toItem: self.contentView,
                            attribute: .leading,
                            multiplier: 1.0,
                            constant: 10.0).isActive = true
         NSLayoutConstraint(item: self.titleLabel,
                            attribute: .trailing,
                            relatedBy: .equal,
-                           toItem: self,
+                           toItem: self.contentView,
                            attribute: .trailing,
                            multiplier: 1.0,
                            constant: 10.0).isActive = true
         NSLayoutConstraint(item: self.titleLabel,
                            attribute: .top,
                            relatedBy: .equal,
-                           toItem: self,
+                           toItem: self.contentView,
                            attribute: .top,
                            multiplier: 1.0,
                            constant: 5.0).isActive = true
@@ -79,27 +81,27 @@ class PnxFilterTableViewCell: UITableViewCell {
         NSLayoutConstraint(item: self.filterView,
                            attribute: .leading,
                            relatedBy: .equal,
-                           toItem: self,
+                           toItem: self.contentView,
                            attribute: .leading,
                            multiplier: 1.0,
                            constant: 10.0).isActive = true
         NSLayoutConstraint(item: self.filterView,
                            attribute: .trailing,
                            relatedBy: .equal,
-                           toItem: self,
+                           toItem: self.contentView,
                            attribute: .trailing,
                            multiplier: 1.0,
                            constant: 10.0).isActive = true
         NSLayoutConstraint(item: self.filterView,
                            attribute: .bottom,
                            relatedBy: .equal,
-                           toItem: self,
+                           toItem: self.contentView,
                            attribute: .bottom,
                            multiplier: 1.0,
                            constant: -10.0).isActive = true
         
         
-        self.conHeight_filterView = self.filterView.heightAnchor.constraint(equalToConstant: 100)
+        self.conHeight_filterView = self.filterView.heightAnchor.constraint(equalToConstant: 200)
         guard let conHeight_filterView = self.conHeight_filterView else { return }
         NSLayoutConstraint.activate([
             conHeight_filterView
@@ -129,23 +131,20 @@ class PnxFilterTableViewCell: UITableViewCell {
     }
     
 
-    func setCellData(_ data:PnxFilterData) {
+    func setCellData(_ filterData:PnxFilterData) {
         self.initView()
-        self.data = data
-        self.titleLabel.text = data.title
-
-        let dataArray = data.data
+        self.cellData = []
+        self.titleLabel.text = filterData.title
 
         var positionX:CGFloat = 0
         var positionY:CGFloat = 0
         var defaultHight:CGFloat = 0
-        dataArray.forEach { data in
+        filterData.datas.forEach { data in
             let button = UIButton()
+            let filterData = FilterButtonData(button: button, data: data)
             button.setTitle(data.display, for: .normal)
-            button.setTitleColor(UIColor.white, for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 12,weight: .bold)
+            self.setButtonStyle(filterData:filterData)
             button.sizeToFit()
-            button.backgroundColor = UIColor(red: 0.208, green: 0.710, blue: 1.000, alpha: 1.000)
             self.filterView.addSubview(button)
 
             if positionX > self.frame.width {
@@ -158,8 +157,67 @@ class PnxFilterTableViewCell: UITableViewCell {
             positionX += button.frame.size.width + self.horizontalSpacing
             button.layer.cornerRadius = button.frame.size.height/2
             if defaultHight == 0 { defaultHight = button.frame.size.height }
+            button.addTarget {
+                if !self.isMultipleSelect {
+                    self.cellData.filter{ $0.data.isSelected }.forEach { selectedfilterData in
+                        selectedfilterData.data.reversSelected()
+                        self.setButtonStyle(filterData:selectedfilterData)
+                    }
+                }
+                data.reversSelected()
+                self.setButtonStyle(filterData:filterData)
+                self.delegate?.didSelectedButton(selector: filterData.button, data: filterData.data)
+            }
+            self.cellData.append(FilterButtonData(button: button, data: data))
         }
-
         self.conHeight_filterView?.constant = positionY + defaultHight
+        
+    }
+    
+    func setButtonStyle(filterData:FilterButtonData){
+        filterData.button.titleLabel?.font = self.defaultFont
+        if filterData.data.isSelected {
+            filterData.button.setTitleColor(self.selectedFontColor, for: .normal)
+            filterData.button.backgroundColor = self.selectedBackgroundColor
+        } else {
+            filterData.button.setTitleColor(self.defaultFontColor, for: .normal)
+            filterData.button.backgroundColor = self.defaultBackgroundColor
+        }
+    }
+    
+    class FilterButtonData {
+        var button:UIButton
+        var data:PnxFilterData.Data
+        
+        init(button: UIButton, data: PnxFilterData.Data) {
+            self.button = button
+            self.data = data
+        }
+    }
+}
+
+extension UIControl {
+    
+    /// 타겟 추가
+    ///
+    /// - Parameters:
+    ///   - controlEvents: 컨트롤 이벤트
+    ///   - action: 액션
+    func addTarget (controlEvents: UIControl.Event = .touchUpInside, action: @escaping ()->()) {
+        let sleeve = ClosureSleeve(action)
+        addTarget(sleeve, action: #selector(ClosureSleeve.invoke), for: controlEvents)
+        objc_setAssociatedObject(self, String(format: "[%d]", arc4random()), sleeve, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+    }
+    
+    class ClosureSleeve {
+        let closure: ()->()
+        
+        init (_ closure: @escaping ()->()) {
+            self.closure = closure
+        }
+        
+        @objc func invoke () {
+            closure()
+        }
     }
 }
