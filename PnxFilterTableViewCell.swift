@@ -87,7 +87,6 @@ public class PnxFilterTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             conHeight_filterView
         ])
-        print("awakeFromNib init view")
     }
 
     func setCellData(_ filterData:PnxFilterData, rootView:PnxFilterTable) {

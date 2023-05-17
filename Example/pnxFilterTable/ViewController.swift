@@ -9,7 +9,7 @@
 import UIKit
 import pnxFilterTable
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PnxFilterTableDelegate {
 
     var pnxFilterTable = PnxFilterTable()
     
@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         self.pnxFilterTable.isMultipleSelect = true
         self.pnxFilterTable.dataList = dataList
         self.pnxFilterTable.tableView.separatorStyle = .none
+        self.pnxFilterTable.delegate = self
         
         let btn = UIButton()
         btn.backgroundColor = UIColor(red: 0.137, green: 0.690, blue: 0.741, alpha: 1.000)
@@ -89,5 +90,9 @@ class ViewController: UIViewController {
         
     }
 
+    func didSelectedButton(selector: UIButton, data: pnxFilterTable.PnxFilterData.Data) {
+        print("display : \(data.display)")
+        print("value : \(data.value)")
+    }
 }
 

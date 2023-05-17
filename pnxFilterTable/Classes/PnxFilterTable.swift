@@ -42,7 +42,7 @@ import UIKit
         }
     }
     
-    public var tableView:UITableView = UITableView()
+    public let tableView:UITableView = UITableView()
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -66,8 +66,6 @@ import UIKit
             self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         self.tableView.register(PnxFilterTableViewCell.self, forCellReuseIdentifier: "PnxFilterTableViewCell")
-        
-        print("initView init")
     }
     
     public func setDefaultButtonStryle(font:UIFont? = nil, fontColor:UIColor? = nil, backgroundColor:UIColor? = nil){
