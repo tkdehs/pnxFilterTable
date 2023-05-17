@@ -34,10 +34,14 @@ class ViewController: UIViewController {
                                                              PnxFilterData.Data(display:"오렌지", value: "10"),
                                                              PnxFilterData.Data(display:"골드키위", value: "11"),
                                                              PnxFilterData.Data(display:"수박", value: "12")]),
-                        PnxFilterData(title:"귝가", datas: [PnxFilterData.Data(display:"한국", value: "1"),
-                                                             PnxFilterData.Data(display:"일본", value: "2"),
-                                                             PnxFilterData.Data(display:"미국", value: "3"),
-                                                            PnxFilterData.Data(display:"영국", value: "4")])]
+                        PnxFilterData(title:"과자", datas: [PnxFilterData.Data(display:"프링글스", value: "1"),
+                                                             PnxFilterData.Data(display:"눈을감자", value: "2"),
+                                                             PnxFilterData.Data(display:"포테이토 칩스", value: "3"),
+                                                            PnxFilterData.Data(display:"포카칩", value: "4")]),
+                        PnxFilterData(title:"라면", datas: [PnxFilterData.Data(display:"신라면", value: "1"),
+                                                             PnxFilterData.Data(display:"삼양라면", value: "2"),
+                                                             PnxFilterData.Data(display:"튀김우동라면", value: "3"),
+                                                            PnxFilterData.Data(display:"틈새라면", value: "4")])]
         self.pnxFilterTable.isMultipleSelect = true
         self.pnxFilterTable.dataList = dataList
         self.pnxFilterTable.tableView.separatorStyle = .none
