@@ -1,6 +1,5 @@
 # pnxFilterTable
 
-[![CI Status](https://img.shields.io/travis/Sangdon Kim/pnxFilterTable.svg?style=flat)](https://travis-ci.org/Sangdon Kim/pnxFilterTable)
 [![Version](https://img.shields.io/cocoapods/v/pnxFilterTable.svg?style=flat)](https://cocoapods.org/pods/pnxFilterTable)
 [![License](https://img.shields.io/cocoapods/l/pnxFilterTable.svg?style=flat)](https://cocoapods.org/pods/pnxFilterTable)
 [![Platform](https://img.shields.io/cocoapods/p/pnxFilterTable.svg?style=flat)](https://cocoapods.org/pods/pnxFilterTable)
