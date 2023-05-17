@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'pnxFilterTable'
   s.version          = '1.0.0'
-  s.summary          = 'Custom filterTableView'
+  s.summary          = 'Custom filter tableView'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,22 +17,17 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
+  s.description      = 'Custom filter tableView'
   s.homepage         = 'https://github.com/tkdehs/pnxFilterTable'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.platform     = :ios
+  s.platform         = :ios
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Sangdon Kim' => 'tkdehs0454@naver.com' }
+  s.author           = { 'Sangdon-Kim' => 'tkdehs0454@naver.com' }
   s.source           = { :git => 'https://github.com/tkdehs/pnxFilterTable.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '11.0'
-  s.swift_versions = '4.0'
-
-  s.source_files = 'pnxFilterTable/Classes/**/*'
+  s.source_files     = 'pnxFilterTable/Classes/**/*'
+  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+#  s.source_files  = "pnxFilterTable", "pnxFilterTable/*.{h,m}"
   
   # s.resource_bundles = {
   #   'pnxFilterTable' => ['pnxFilterTable/Assets/*.png']
