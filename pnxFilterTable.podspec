@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'Custom filter tableView'
+  s.description      = 'This is a table view that has a tag-type view structure.'
   s.homepage         = 'https://github.com/tkdehs/pnxFilterTable'
   s.platform         = :ios
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
