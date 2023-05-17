@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
 
   s.description      = 'This is a table view that has a tag-type view structure.'
   s.homepage         = 'https://github.com/tkdehs/pnxFilterTable'
-  s.platform         = :ios
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Sangdon-Kim' => 'tkdehs0454@naver.com' }
   s.source           = { :git => 'https://github.com/tkdehs/pnxFilterTable.git', :tag => s.version.to_s }
